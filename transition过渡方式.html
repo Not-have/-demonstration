@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition过渡方式</title>
+	<style>
+	body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+		margin:0;
+		padding:0;
+	}
+	.box{
+		width: 100px;
+		height: 100px;
+		background: blue;
+		text-align: center;
+		line-height: 100px;
+		color: white;
+		margin-top: 20px;
+	}
+	body:hover .box{
+		transform: translateX(800px) rotate(360deg);
+	}
+	.box1{
+		transition: all 5s ease;
+	}
+	.box2{
+		transition: all 5s linear;
+	}
+	.box3{
+		transition: all 5s ease-in;
+	}
+	.box4{
+		transition: all 5s ease-out;
+	}
+	.box5{
+		transition: all 5s ease-in-out;
+	}
+	</style>
+</head>
+<body>
+	<div class="box box1">ease</div>
+	<div class="box box2">linear</div>
+	<div class="box box3">ease-in</div>
+	<div class="box box4">ease-out</div>
+	<div class="box box5">ease-in-out</div>
+</body>
+</html>

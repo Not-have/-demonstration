@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>照片墙</title>
+	<style>
+	body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+		margin:0;
+		padding:0;
+	}
+	html,body{
+		height: 100%;
+	}
+	body{
+		background: linear-gradient(#09ffeb 0%,#000 75%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.box{
+		width: 160px;
+		height: 300px;
+		position: relative;
+		transform-style: preserve-3d;
+		transform:rotateX(-20deg);
+		animation:photo 8s linear infinite;
+	}
+
+	.box:hover{
+		animation:photo 8s linear infinite paused;
+	}
+
+	@keyframes photo{
+		0%{
+			transform:rotateX(-20deg) rotateY(0deg);
+		}
+		100%{
+			transform:rotateX(-20deg) rotateY(360deg);
+		}
+	}
+
+	.box img{
+		width: 160px;
+		height: 300px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 20px;
+		transform-style: preserve-3d;
+		box-shadow: 0 0 10px 3px gray;
+		-webkit-box-reflect:below 3px linear-gradient(rgba(255,255,255,0) 51%,rgba(255,255,255,1) 77%);
+	}
+	.box img:nth-child(1){
+		transform:rotateY(0deg) translateZ(235px);
+	}
+	.box img:nth-child(2){
+		transform:rotateY(40deg) translateZ(235px);
+	}
+	.box img:nth-child(3){
+		transform:rotateY(80deg) translateZ(235px);
+	}
+	.box img:nth-child(4){
+		transform:rotateY(120deg) translateZ(235px);
+	}
+	.box img:nth-child(5){
+		transform:rotateY(160deg) translateZ(235px);
+	}
+	.box img:nth-child(6){
+		transform:rotateY(200deg) translateZ(235px);
+	}
+	.box img:nth-child(7){
+		transform:rotateY(240deg) translateZ(235px);
+	}
+	.box img:nth-child(8){
+		transform:rotateY(280deg) translateZ(235px);
+	}
+	.box img:nth-child(9){
+		transform:rotateY(320deg) translateZ(235px);
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="img/p1.jpg" alt="">
+		<img src="img/p2.jpg" alt="">
+		<img src="img/p3.jpg" alt="">
+		<img src="img/p4.jpg" alt="">
+		<img src="img/p5.jpg" alt="">
+		<img src="img/p6.jpg" alt="">
+		<img src="img/p7.jpg" alt="">
+		<img src="img/p8.jpg" alt="">
+		<img src="img/p9.jpg" alt="">
+	</div>
+</body>
+</html>

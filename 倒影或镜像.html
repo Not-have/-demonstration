@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒影或镜像</title>
+	<style>
+	body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+		margin:0;
+		padding:0;
+	}
+	html,body{
+		height: 100%;
+	}
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.imgs{
+		border-radius: 20px;
+		box-shadow: 0 2px 2px gray;
+		-webkit-box-reflect:below 2px linear-gradient(rgba(255,255,255,0) 25%,rgba(255,255,255,1) 65%);
+	}
+	</style>
+</head>
+<body>
+	<img class="imgs" src="img/h.png" width="300">
+</body>
+</html>

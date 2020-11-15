@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition过渡动画</title>
+	<style>	
+	body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+		margin:0;
+		padding:0;
+	}
+	.box{
+		width: 60px;
+		height: 60px;
+		background: red;
+		margin:100px auto;
+		/*transition:transform 3s;*/
+		transition: all 3s;
+		/*transition: transform 3s,background 2s,border-radius 1s;*/
+
+		/*transition: all 3s -1.5s;*/
+	}
+	.box:hover{
+		transform:rotate(360deg) scale(3);
+		background: blue;
+		border-radius: 50%;
+	}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

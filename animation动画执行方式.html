@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation动画执行方式</title>
+	<style>
+	body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+		margin:0;
+		padding:0;
+	}
+	.box{
+		width: 100px;
+		height: 100px;
+		background: blue;
+		text-align: center;
+		line-height: 100px;
+		color: white;
+		margin-top: 20px;
+	}
+
+	@keyframes  box_ani{
+		0%{
+			transform:translateX(0px) rotate(0deg);
+		}
+		20%{
+			transform:translateX(150px) rotate(60deg);
+		}
+		40%{
+			transform:translateX(300px) rotate(120deg);
+		}
+		60%{
+			transform:translateX(450px) rotate(180deg);
+		}
+		80%{
+			transform:translateX(600px) rotate(240deg);
+		}
+		100%{
+			transform:translateX(800px) rotate(360deg);
+		}
+	}
+
+	.box1{
+		animation: box_ani 6s 1s;
+	}
+	.box2{
+		/*animation: box_ani 2s 4 linear alternate-reverse;*/
+		animation: box_ani 2s 3 linear both;
+	}
+	.box3{
+		animation: box_ani 6s 1s ease-in;
+	}
+	.box4{
+		animation: box_ani 6s 1s ease-out;
+	}
+	.box5{
+		animation: box_ani 6s 1s ease-in-out;
+	}
+	.box6{
+		animation: box_ani 6s 1s step-start;
+	}
+	.box7{
+		animation: box_ani 6s 1s step-end;
+	}
+	</style>
+</head>
+<body>
+	<!-- <div class="box box1">ease</div> -->
+	<div class="box box2">linear</div>
+	<!-- <div class="box box3">ease-in</div> -->
+	<!-- <div class="box box4">ease-out</div> -->
+	<!-- <div class="box box5">ease-in-out</div> -->
+	<!-- <div class="box box6">step-start</div> -->
+	<!-- <div class="box box7">step-end</div> -->
+</body>
+</html>

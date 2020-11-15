@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人物动画效果</title>
+	<style>
+	body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+		margin:0;
+		padding:0;
+	}
+	.box{
+		width: 375px;
+		height: 233px;
+		background: url(img/bg.png);
+		margin-bottom: 20px;
+	}
+
+	.box1{
+		animation: person1 2s infinite steps(14,start);
+	}
+	.box2{
+		animation: person1 2s infinite steps(14,end);
+	}
+
+	/*@keyframes person{
+		0%{
+			background-position: 0 0;
+		}
+		7%{
+			background-position:-375px 0;
+		}
+		14%{
+			background-position:-750px 0;
+		}
+		21%{
+			background-position:-1125px 0;
+		}
+		28%{
+			background-position:-1500px 0;
+		}
+		35%{
+			background-position:-1875px 0;
+		}
+		42%{
+			background-position:-2250px 0;
+		}
+		49%{
+			background-position:-2625px 0;
+		}
+		56%{
+			background-position:-3000px 0;
+		}
+		63%{
+			background-position:-3375px 0;
+		}
+		70%{
+			background-position:-3750px 0;
+		}
+		77%{
+			background-position:-4125px 0;
+		}
+		84%{
+			background-position:-4500px 0;
+		}
+		91%{
+			background-position:-4875px 0;
+		}
+		100%{
+			background-position:-5250px 0;
+		}
+	}*/
+
+	@keyframes person1{
+		0%{
+			background-position: 0 0;
+		}
+		100%{
+			background-position:-5252px 0;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="box box1"></div>
+	<div class="box box2"></div>
+</body>
+</html>

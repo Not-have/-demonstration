@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation动画</title>
+	<style>	
+	body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+		margin:0;
+		padding:0;
+	}
+	.box{
+		width: 60px;
+		height: 60px;
+		background: red;
+		margin:100px auto;
+		animation:box_ani 6s infinite; 
+	}
+	.box:hover{
+		animation:box_ani 6s infinite paused;
+	}
+
+	/*定义动画关键帧*/
+	/*@keyframes box_ani{
+		0%{
+			transform:rotate(0deg) scale(1);
+			border-radius: 0;
+			background: red;
+		}
+		17%{
+			transform:rotate(120deg) scale(1.5);
+			border-radius: 20%;
+			background: orange;
+		}
+		34%{
+			transform:rotate(240deg) scale(2);
+			border-radius: 40%;
+			background: pink;
+		}
+		51%{
+			transform:rotate(360deg) scale(3);
+			border-radius: 50%;
+			background: green;
+		}
+		68%{
+			transform:rotate(240deg) scale(2);
+			border-radius: 40%;
+			background: yellow;
+		}
+		85%{
+			transform:rotate(120deg) scale(1.5);
+			border-radius: 20%;
+			background: purple;
+		}
+		100%{
+			transform:rotate(0deg) scale(1);
+			border-radius: 0;
+			background: red;
+		}
+	}*/
+
+	/*@keyframes box_ani{
+		from{
+			transform:rotate(0deg) scale(1);
+			border-radius: 0;
+			background: red;
+		}
+		17%{
+			transform:rotate(120deg) scale(1.5);
+			border-radius: 20%;
+			background: orange;
+		}
+		34%{
+			transform:rotate(240deg) scale(2);
+			border-radius: 40%;
+			background: pink;
+		}
+		51%{
+			transform:rotate(360deg) scale(3);
+			border-radius: 50%;
+			background: green;
+		}
+		68%{
+			transform:rotate(240deg) scale(2);
+			border-radius: 40%;
+			background: yellow;
+		}
+		85%{
+			transform:rotate(120deg) scale(1.5);
+			border-radius: 20%;
+			background: purple;
+		}
+		to{
+			transform:rotate(0deg) scale(1);
+			border-radius: 0;
+			background: red;
+		}
+	}*/
+
+	@-webkit-keyframes box_ani{
+		from{
+			transform:rotate(0deg) scale(1);
+			border-radius: 0;
+			background: red;
+		}
+		17%{
+			transform:rotate(120deg) scale(1.5);
+			border-radius: 20%;
+			background: orange;
+		}
+		34%{
+			transform:rotate(240deg) scale(2);
+			border-radius: 40%;
+			background: pink;
+		}
+		51%{
+			transform:rotate(360deg) scale(3);
+			border-radius: 50%;
+			background: green;
+		}
+		68%{
+			transform:rotate(240deg) scale(2);
+			border-radius: 40%;
+			background: yellow;
+		}
+		85%{
+			transform:rotate(120deg) scale(1.5);
+			border-radius: 20%;
+			background: purple;
+		}
+		to{
+			transform:rotate(0deg) scale(1);
+			border-radius: 0;
+			background: red;
+		}
+	}
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
