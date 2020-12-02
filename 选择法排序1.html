@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="测试" onclick="testf()">
+    
+</body>
+</html>
+<script>
+/*    
+// 9,  8, 3, 7, 6
+
+第一轮
+i=0;
+//从第一个数开始到最后，找到最小数(内层循环)，和第一个位置的数交换
+3, 8,9,7,6
+
+第二轮
+i=1;
+//从第二个数开始到最后，找到最小数(内层循环)，和第二个位置的数交换
+3, 6, 9,7,8
+
+第三轮
+i=2
+//从第三个数开始到最后，找到最小数，和第三个位置的数交换
+3, 6, 7, 9,8
+
+第四轮
+3, 6, 7, 8, 9
+
+*/
+
+function testf(){
+    var arr=[9,  8, 3, 7, 6];//
+    //
+    for(var i=0;i<arr.length-1;i++){
+        //1、找最小数(的位置)
+        var min = arr[i]; // 9
+        var minIndex = i; // 0
+        for(var j=i+1;j<arr.length;j++){
+            if(arr[j]<min){
+                min = arr[j];//8  3   
+                minIndex = j;//1  2
+            }
+        }
+        // minIndex = 2
+        //2、交换
+        
+        var temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
+    }
+    console.log(arr);
+}
+
+</script>
