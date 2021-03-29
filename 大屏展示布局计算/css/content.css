@@ -1,0 +1,88 @@
+.box{
+    width:100%;
+    height:100%;
+    padding:30px;
+    box-sizing: border-box;
+    font-size:18px;
+}
+input:focus {
+    outline:none;    
+    border: 1px solid #4E87B5;
+    box-shadow: 4px 4px 9px #4E87B5;
+}
+.box > h1{
+    margin-bottom:20px;
+    text-align: center;
+}
+/* 设置头部的样式 */
+fieldset{
+    width:650px;
+    height:100px;
+    border-radius:5px;
+}
+.definition{
+    width:100%;
+    height:100%;
+    line-height:78px;
+}
+.definition > .definition_width{
+    float: left;
+}
+.definition > .definition_width > input{
+    width:80px;
+    margin:0 10px;
+}
+.definition > .definition_height{
+    float: left;
+    margin-left:60px;
+}
+.definition > .definition_height > input{
+    width:80px;
+    margin:0 10px;
+}
+.definition > button{
+    width: 78px;
+    height: 41px;
+    margin-left:60px;
+    border:0;
+    border-radius: 8px;
+    /* background: linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%); */
+}
+.definition > button:focus{
+    outline:none;
+    border-bottom: 4px solid rgba(0,0,0,0.21);
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 15%);
+}
+/* 下面时换算 */
+.converse{
+    margin-top:30px;
+    width: 650px;
+    height:100px;
+    padding: 0 10px 0 20px;
+}
+.converse_width{
+    overflow: hidden;
+}
+.converse_enter{
+    float: left;
+}
+.converse_enter > input{
+    width:80px;
+    margin:0 10px;
+}
+.converse_result{
+    float: left;
+    margin-left:60px;
+}
+.converse_result > span{
+    display: inline-block;
+    margin:0 10px;
+    line-height:1;
+    color: red;
+    text-decoration: underline green;
+}
+.converse_height{
+    margin-top:30px;
+    overflow: hidden;
+}
