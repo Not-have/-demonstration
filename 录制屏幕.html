@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>录制屏幕</title>
+    <style>
+        video {
+            height: 400px;
+            width: 600px;
+        }
+
+        button {
+            color: #fff;
+            background-color: #409eff;
+            border-color: #409eff;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            box-sizing: border-box;
+            font-weight: 500;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: none;
+            margin: 4px 0;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <video controls></video>
+    <button>开始录制</button>
+</body>
+
+</html>
+<script>
+    const but = document.querySelector("button");
+    but.addEventListener("click", async function () {
+        const stream = await navigator.mediaDevices.getDisplayMedia({ video: true })
+        /**
+         * 查看浏览器是否支持 
+         */
+        const mime = MediaRecorder.isTypeSupported("video/webm;codes=vp9") ? "video/webm;codes=vp9" : "video/webm"
+        let mediaRecorder = new MediaRecorder(stream, {
+            mimeType: mime
+        })
+        let chunks = []
+        /**
+         * 监听数据是否可用
+         */
+        mediaRecorder.addEventListener("dataavailable", function (e) {
+            chunks.push(e.data)
+        })
+        /**
+         * 监听视频是否暂停
+         */
+        mediaRecorder.addEventListener("stop", function () {
+            /**
+             * 播放流
+             */
+            let blob = new Blob(chunks, { type: chunks[0].type })
+            let url = URL.createObjectURL(blob)
+            let video = document.querySelector("video")
+            video.src = url
+
+            /**
+             * 下载
+             * 这个视频是一个二进制的数据流
+             */
+            const a = document.createElement("a")
+            a.href = url
+            a.download = "视频" + Math.floor(Math.random() * 10) + ".mp4"
+            a.click()
+        })
+        /**
+        * 启动录制
+        */
+       mediaRecorder.start()
+    })
+</script>
